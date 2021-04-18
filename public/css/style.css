@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+video#bgvid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: 100%; height: auto; z-index: -100;
+  background-size: cover;
+}
+
+.fsect{
+	width: 100%;
+	height: 50vh;
+	margin-top: 5vh;
+	padding-top: 20vh; 
+	/*background-color: #fff8e1;*/
+	background: linear-gradient(to right, red, green, black);
+	text-align: center;
+} 
+.center{
+	text-align: center;
+}
+.ssect{
+	width: 100%;
+	height: 100vh;
+}
+.tsect{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to right, red, green, black);
+}
+.qsect{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to right, red, green, black);
+}
+.csect{
+	width: 100%;
+	min-height: 100vh;
+	padding-bottom: 5vh;
+	background: linear-gradient(to right, red, green, black);
+}
+.container{
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.big{
+	font-size: 100px;
+	color: red;
+}
+h1, h2, h3, p{
+	color: white;
+}
+h1{
+	font-size: 60px;
+}
+h2{
+	font-size: 40px;
+}
+h3{
+	font-size: 30px;
+}
+p{
+	font-size: 20px;
+}
+
+.pt20{
+	padding-top: 20px!important;
+}
+.pt80{
+	padding-top: 80px!important;
+}
+
+nav{
+	width: 90%;
+	height: 45px;
+	padding: 0 5%;
+	position: fixed;
+	top: 0;
+	background: linear-gradient(to right, red, green, black);
+}
+nav ul{
+	height: 45px;
+	display: flex;
+	list-style: none;
+}
+nav ul a{
+	text-decoration: none;
+	color: white;
+}
+nav ul li{
+	width: 8vw;
+	height: 100%;
+	margin: 0 1%;
+	text-align: center;
+	line-height: 45px;
+	transition: 0.5s ease;
+}
+nav ul li:hover{
+	transition: 0.5s ease;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.more{
+	width: 100%;
+	text-align: right;
+}
+.more a{
+	text-decoration: none;
+}
+
+.troiscol{
+	width: 100%;
+	display: inline-flex;
+}
+
+.unecol{
+	width: 30%;
+	height: 400px;
+	padding: auto 1.5%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.carre{
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+	margin: auto;
+	margin-top: 20px;
+	background-color: red;
+}
+.wrap{
+	flex-wrap: wrap;
+}
+.ligne{
+	flex-direction: row;
+}
+footer{
+	width: 90%;
+	height: 45px;
+	padding: 0 5%;
+	background: linear-gradient(to right, red, green, black);
+}

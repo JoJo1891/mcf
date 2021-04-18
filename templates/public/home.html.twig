@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %} {% block body %}
+	<div class="fsect">
+		<h1>MCF</h1>
+		<h2>Mon Coiffeur France</h2>
+		<div>
+			<p>Trouver votre coiffeur antillais en france, dans ta ville, près de chez toi.</p>
+			
+		</div>
+	</div>
+	<div class="ssect">
+		<video autoplay="true" loop muted  {# poster="polina.jpg" #} id="bgvid">
+		  	<source src="{{ asset('medias/motards-francais-vs-quotidien-123.mp4') }}" type="video/mp4">
+		</video>
+	</div>
+	<div class="container tsect pt20">
+		<h2>Coiffeurs de Paris</h2>
+		<div class="troiscol">
+			<div class="unecol">
+				<div class="carre">
+
+				</div>
+				<h3>Pseudo</h3>
+			</div>
+			<div class="unecol">
+				<div class="carre">
+
+				</div>
+				<h3>Pseudo</h3>
+			</div>
+			<div class="unecol">
+				<div class="carre">
+
+				</div>
+				<h3>Pseudo</h3>
+			</div>
+		</div>
+		<div class="more">
+			<a href="#!">Afficher plus de coiffeur de votre région</a>
+		</div>
+	</div>
+	<div class="container qsect pt20">
+		<h2 >Nous rejoindre</h2>
+	</div>
+	  	
+{% endblock %}
