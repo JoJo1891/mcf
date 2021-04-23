@@ -2,7 +2,7 @@
 {% block title %}Coiffeurs{% endblock %} {% block body %}
 	{% block stylesheets %}
 		<style type="text/css">
-			ul {
+			/*ul {
   list-style: none;
   margin: 0;
   padding-top: 5px;
@@ -22,7 +22,7 @@ li {
 li:hover {
   background: #dfdfdf;
 }
-		</style>
+		</style>*/
 	{% endblock %}
 	<div class="fsect">
 		<h1>Coiffeurs Antillais</h1>
@@ -30,12 +30,22 @@ li:hover {
 		<div>
 			<p>Trouver votre coiffeur antillais en france, dans ta ville, près de chez toi.</p>
 			<input id="ville" placeholder="Entrez un code postal ou une ville" autocomplete="off" size="50">
-			<ul>
-			  <li data-vicopo="#ville" class="liville">
-			    <strong data-vicopo-code-postal></strong>
-			    <span data-vicopo-ville class="ville"></span>
-			  </li>
-			</ul>
+			<div class="suggest">
+				<div class="sugcol">
+					<ul>
+					  <li data-vicopo="#ville" class="liville">
+					    <strong data-vicopo-code-postal></strong>
+					  </li>
+					</ul>
+				</div>
+				<div class="sugcol">
+					<ul>
+					  <li data-vicopo="#ville" class="liville1">
+					    <span data-vicopo-ville class="ville"></span>
+					  </li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	

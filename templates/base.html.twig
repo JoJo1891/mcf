@@ -47,11 +47,19 @@
                 e.stopPropagation();
               }
             });
-           var maville
+           var maville;
+           var maville1;
            $(document).on("click",".liville", function (){
                maville = $(this).text();
-               $("#ville").val(maville);
-               alert(maville);
+               mavillec =$.trim(maville);
+               $("#ville").val(mavillec);
+               //alert(maville);
+           });
+           $(document).on("click", ".liville1", function (){
+               maville1 = $(this).text();
+               maville1c =$.trim(maville1);
+               $("#ville").val(maville1c);
+               //alert(maville1c);
            });
          
            
