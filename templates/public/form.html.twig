@@ -1,0 +1,39 @@
+{{ form_start(form) }}
+    
+    <div class="row"> 
+    		<div class="card br20 white col s10 offset-s1">
+    			<div class="container">
+    				{% for message in app.flashes('success') %}
+	    				<div class="materialert success valign-wrapper center-align white green-text">
+	    					<p>
+								<i class="material-icons">check</i>
+								Votre message à bien été envoyer ! 
+	    					</p>
+						</div>
+					{% endfor %}
+    				<div class="row">
+	    				<div class="input-field col s6">
+							{{ form_row(form.name) }}
+						</div>
+						<div class="input-field col s6">
+		          			{{ form_row(form.email) }}
+	    				</div>
+	    			</div>
+		          	<div class="row">
+		          		<div class="input-field col s6">
+							{{ form_row(form.objet) }}
+		          		</div>
+		          	</div>
+		          	<div class="row">
+		          		<div class="input-field ">
+			          		{{ form_row(form.message) }}
+			          	</div>
+			        </div>
+			        <div class="row center-align">
+			          		{{ form_row(form.save)}}
+		          	</div>
+    			</div>
+	        </div>
+      </div>
+      
+{{ form_end(form) }}

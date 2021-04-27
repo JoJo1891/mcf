@@ -44,5 +44,52 @@ class DefaultController extends AbstractController
 
         return $this->render('public/about.html.twig');
     }
+
+    /**
+    * @Route("/contact", name="app_contact")
+    */
+    public function contact(Request $request, MailerInterface $mailer): Response
+    {
+        $form = $this->createFormBuilder()
+            ->add('name', TextType::class, array(
+                'label' => 'Nom',
+                'attr' => array('class' => 'validate')))
+            ->add('email', EmailType::class, array(
+                'label' => 'Email',
+                'attr' => array('class' => 'validate')))
+            ->add('objet', TextType::class, array(
+                'label' => 'Objet',
+                'attr' => array('class' => 'validate')))
+            ->add('message', TextareaType::class, array(
+                'label' => 'Message',
+                'attr' => array('class' => 'validate materialize-textarea')))
+            ->add('save', SubmitType::class, ['label' => 'Envoyer', 'attr' => array('class' => 'btn blue wave-effect wave-light')])
+            ->getForm();
+
+            $req = $form->handleRequest($request);
+            $name = $req->getData()['name'];
+            $mail = $req->getData()['email'];
+            $objet = $req->getData()['objet'];
+            $message = $req->getData()['message'];
+        
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $email = (new TemplatedEmail())
+                ->from('joel.sylvius18@gmail.com')
+                ->text('Contact Faq ')
+                ->to('joel.sylvius18@gmail.com')
+                ->subject($objet)
+                ->html('<h1>'.$name.'</h1><p>'.$mail.'</p><p>'.$message.'</p>')
+                
+            ;
+            $mailer->send($email);
+            $this->addFlash('success', 'Message envoyer!');
+        }
+
+        return $this->render('public/contact.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
 }
 
