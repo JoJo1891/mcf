@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Coifqui{% endblock %}
+
+{% block body %}
+    <h1>Create new Coifqui</h1>
+
+    {{ include('coifqui/_form.html.twig') }}
+
+    <a href="{{ path('coifqui_index') }}">back to list</a>
+{% endblock %}

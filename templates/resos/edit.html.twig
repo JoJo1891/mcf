@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Resos{% endblock %}
+
+{% block body %}
+    <h1>Edit Resos</h1>
+
+    {{ include('resos/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('resos_index') }}">back to list</a>
+
+    {{ include('resos/_delete_form.html.twig') }}
+{% endblock %}

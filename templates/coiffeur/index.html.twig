@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coiffeur index{% endblock %}
+
+{% block body %}
+    <h1>Coiffeur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Pseudo</th>
+                <th>Cp</th>
+                <th>Ville</th>
+                <th>Certifpro</th>
+                <th>Certifqua</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coiffeur in coiffeurs %}
+            <tr>
+                <td>{{ coiffeur.id }}</td>
+                <td>{{ coiffeur.pseudo }}</td>
+                <td>{{ coiffeur.cp }}</td>
+                <td>{{ coiffeur.ville }}</td>
+                <td>{{ coiffeur.certifpro }}</td>
+                <td>{{ coiffeur.certifqua }}</td>
+                <td>
+                    <a href="{{ path('coiffeur_show', {'id': coiffeur.id}) }}">show</a>
+                    <a href="{{ path('coiffeur_edit', {'id': coiffeur.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('coiffeur_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quicoiffe{% endblock %}
+
+{% block body %}
+    <h1>Quicoiffe</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ quicoiffe.id }}</td>
+            </tr>
+            <tr>
+                <th>Qui</th>
+                <td>{{ quicoiffe.qui }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('quicoiffe_index') }}">back to list</a>
+
+    <a href="{{ path('quicoiffe_edit', {'id': quicoiffe.id}) }}">edit</a>
+
+    {{ include('quicoiffe/_delete_form.html.twig') }}
+{% endblock %}

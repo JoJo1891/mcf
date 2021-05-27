@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New StyleCoiffeur{% endblock %}
+
+{% block body %}
+    <h1>Create new StyleCoiffeur</h1>
+
+    {{ include('style_coiffeur/_form.html.twig') }}
+
+    <a href="{{ path('style_coiffeur_index') }}">back to list</a>
+{% endblock %}

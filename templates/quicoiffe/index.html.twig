@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quicoiffe index{% endblock %}
+
+{% block body %}
+    <h1>Quicoiffe index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Qui</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for quicoiffe in quicoiffes %}
+            <tr>
+                <td>{{ quicoiffe.id }}</td>
+                <td>{{ quicoiffe.qui }}</td>
+                <td>
+                    <a href="{{ path('quicoiffe_show', {'id': quicoiffe.id}) }}">show</a>
+                    <a href="{{ path('quicoiffe_edit', {'id': quicoiffe.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('quicoiffe_new') }}">Create new</a>
+{% endblock %}

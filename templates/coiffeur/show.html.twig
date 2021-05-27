@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coiffeur{% endblock %}
+
+{% block body %}
+    <h1>Coiffeur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ coiffeur.id }}</td>
+            </tr>
+            <tr>
+                <th>Pseudo</th>
+                <td>{{ coiffeur.pseudo }}</td>
+            </tr>
+            <tr>
+                <th>Cp</th>
+                <td>{{ coiffeur.cp }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ coiffeur.ville }}</td>
+            </tr>
+            <tr>
+                <th>Certifpro</th>
+                <td>{{ coiffeur.certifpro }}</td>
+            </tr>
+            <tr>
+                <th>Certifqua</th>
+                <td>{{ coiffeur.certifqua }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('coiffeur_index') }}">back to list</a>
+
+    <a href="{{ path('coiffeur_edit', {'id': coiffeur.id}) }}">edit</a>
+
+    {{ include('coiffeur/_delete_form.html.twig') }}
+{% endblock %}

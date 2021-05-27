@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Coifqui{% endblock %}
+
+{% block body %}
+    <h1>Edit Coifqui</h1>
+
+    {{ include('coifqui/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('coifqui_index') }}">back to list</a>
+
+    {{ include('coifqui/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Resos{% endblock %}
+
+{% block body %}
+    <h1>Create new Resos</h1>
+
+    {{ include('resos/_form.html.twig') }}
+
+    <a href="{{ path('resos_index') }}">back to list</a>
+{% endblock %}

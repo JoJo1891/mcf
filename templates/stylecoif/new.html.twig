@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Stylecoif{% endblock %}
+
+{% block body %}
+    <h1>Create new Stylecoif</h1>
+
+    {{ include('stylecoif/_form.html.twig') }}
+
+    <a href="{{ path('stylecoif_index') }}">back to list</a>
+{% endblock %}

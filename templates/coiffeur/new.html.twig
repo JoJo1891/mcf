@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Coiffeur{% endblock %}
+
+{% block body %}
+    <h1>Create new Coiffeur</h1>
+
+    {{ include('coiffeur/_form.html.twig') }}
+
+    {% for sc in stylecoif %}
+    	<button> {{ sc.name }} </button>
+    {% endfor %}
+
+    <a href="{{ path('coiffeur_index') }}">back to list</a>
+{% endblock %}

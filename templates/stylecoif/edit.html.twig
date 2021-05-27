@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Stylecoif{% endblock %}
+
+{% block body %}
+    <h1>Edit Stylecoif</h1>
+
+    {{ include('stylecoif/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('stylecoif_index') }}">back to list</a>
+
+    {{ include('stylecoif/_delete_form.html.twig') }}
+{% endblock %}

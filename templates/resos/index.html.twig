@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Resos index{% endblock %}
+
+{% block body %}
+    <h1>Resos index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Liens</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reso in resos %}
+            <tr>
+                <td>{{ reso.id }}</td>
+                <td>{{ reso.name }}</td>
+                <td>{{ reso.liens }}</td>
+                <td>
+                    <a href="{{ path('resos_show', {'id': reso.id}) }}">show</a>
+                    <a href="{{ path('resos_edit', {'id': reso.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('resos_new') }}">Create new</a>
+{% endblock %}

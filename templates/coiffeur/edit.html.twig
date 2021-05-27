@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Coiffeur{% endblock %}
+
+{% block body %}
+    <h1>Edit Coiffeur</h1>
+
+    {{ include('coiffeur/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('coiffeur_index') }}">back to list</a>
+
+    {{ include('coiffeur/_delete_form.html.twig') }}
+{% endblock %}
