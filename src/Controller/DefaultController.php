@@ -62,8 +62,8 @@ class DefaultController extends AbstractController
                 'attr' => array('class' => 'validate')))
             ->add('message', TextareaType::class, array(
                 'label' => 'Message',
-                'attr' => array('class' => 'validate materialize-textarea')))
-            ->add('save', SubmitType::class, ['label' => 'Envoyer', 'attr' => array('class' => 'btn blue wave-effect wave-light')])
+                'attr' => array('class' => 'autocapitalize="" autocomplete="" rows="5" cols="50" minlength="10" maxlength="50" ')))
+            ->add('save', SubmitType::class, ['label' => 'Envoyer', 'attr' => array('class' => 'btn blue')])
             ->getForm();
 
             $req = $form->handleRequest($request);

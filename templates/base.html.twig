@@ -18,10 +18,19 @@
     <body>
         <nav>
             <ul>
-                <a href="{{ path('app_home') }}"><li>Accueil</li></a>
-                <a href="{{ path('app_coiffeurs') }}"><li>Coiffeurs</li></a>
-                <a href="{{ path('app_about') }}"><li>Apropos</li></a>
-                <a href="{{ path('app_contact') }}"><li>Contacts</li></a>
+                {% if app.user %}
+                    <a href="{{ path('app_home') }}"><li>Accueil</li></a>
+                    <a href="{{ path('app_coiffeurs') }}"><li>Coiffeurs</li></a>
+                    <a href="{{ path('app_about') }}"><li>Apropos</li></a>
+                    <a href="{{ path('app_contact') }}"><li>Contacts</li></a>
+                    <a class="hoverable" href="{{ path('app_logout') }}"><li>Déconnexion</li></a>
+                {% else %}
+                    <a href="{{ path('app_home') }}"><li>Accueil</li></a>
+                    <a href="{{ path('app_coiffeurs') }}"><li>Coiffeurs</li></a>
+                    <a href="{{ path('app_about') }}"><li>Apropos</li></a>
+                    <a href="{{ path('app_contact') }}"><li>Contacts</li></a>
+                    <a class="hoverable" href="{{ path('app_login') }}"><li>Connexion</li></a>
+                {% endif %}
             </ul>
         </nav>
         {% block body %}{% endblock %}
