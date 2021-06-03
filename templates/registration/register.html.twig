@@ -37,5 +37,8 @@
             </div>
                     <button type="submit" class="btn">Register</button>
         {{ form_end(registrationForm) }}
+        <div class="row">
+            <p>Vous avez dejà un compte? Alors connectez-vous en <a href="{{ path('app_login') }}">cliquant ici</a></p>
+        </div>
     </div>
 {% endblock %}
